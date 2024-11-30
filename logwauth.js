@@ -18,7 +18,7 @@ import {
 import { wauthparam } from "https://cdn.jsdelivr.net/gh/whatsauth/js@0.2.1/config.js";
 import Swal from "https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js";
 
-const backendAuthAPI = "https://your-backend-api-url.com/api/auth/verify";
+const backendAuthAPI = "https://pos-ochre.vercel.app/api/auth/users";
 
 // Konfigurasi WhatsAuth
 wauthparam.auth_ws = "d3NzOi8vYXBpLndhLm15LmlkL3dzL3doYXRzYXV0aC9wdWJsaWM=";
