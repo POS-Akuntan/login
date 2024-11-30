@@ -24,6 +24,7 @@ const backendAuthAPI = "https://pos-ochre.vercel.app/api/auth/users";
 wauthparam.auth_ws = "d3NzOi8vYXBpLndhLm15LmlkL3dzL3doYXRzYXV0aC9wdWJsaWM=";
 wauthparam.keyword = "aHR0cHM6Ly93YS5tZS82Mjg1OTIyMDI0MDA3P3RleHQ9d2g0dDVhdXRoMA==";
 wauthparam.tokencookiehourslifetime = 18;
+wauthparam.redirect = ""; // Kosongkan redirect
 deleteCookie(wauthparam.tokencookiename); // Hapus token lama
 
 // QR Controller
@@ -31,8 +32,11 @@ qrController(wauthparam);
 
 // Fungsi Callback setelah QR dipindai
 window.addEventListener("message", async (event) => {
-  if (event.origin !== "https://wa.my.id") return; // Ganti dengan domain valid WhatsAuth Anda
+  console.log("Event Origin:", event.origin);
+  if (event.origin !== "https://wa.my.id") return;
+
   const { token } = event.data;
+  console.log("Token:", token);
 
   if (token) {
       try {
@@ -43,6 +47,7 @@ window.addEventListener("message", async (event) => {
               body: JSON.stringify({ token }),
           });
           const result = await response.json();
+          console.log("Backend Response:", result);
 
           if (response.ok && result.role) {
               // Cek role dari response
@@ -75,3 +80,4 @@ window.addEventListener("message", async (event) => {
       }
   }
 });
+
