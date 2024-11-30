@@ -15,6 +15,7 @@ import {
   qrController,
   deleteCookie,
 } from "https://cdn.jsdelivr.net/gh/whatsauth/js@0.2.1/whatsauth.js";
+import { wauthparam } from "https://cdn.jsdelivr.net/gh/whatsauth/js@0.2.1/config.js";
 import Swal from "https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js";
 
 const backendAuthAPI = "https://your-backend-api-url.com/api/auth/verify";
