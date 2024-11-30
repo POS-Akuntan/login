@@ -22,7 +22,7 @@ const backendAuthAPI = "https://your-backend-api-url.com/api/auth/verify";
 
 // Konfigurasi WhatsAuth
 wauthparam.auth_ws = "d3NzOi8vYXBpLndhLm15LmlkL3dzL3doYXRzYXV0aC9wdWJsaWM=";
-wauthparam.keyword = "  aHR0cHM6Ly93YS5tZS82Mjg1MTU3OTc5NzU5P3RleHQ9d2g0dDVhdXRoMA==";
+wauthparam.keyword = "aHR0cHM6Ly93YS5tZS82Mjg1OTIyMDI0MDA3P3RleHQ9d2g0dDVhdXRoMA==";
 wauthparam.tokencookiehourslifetime = 18;
 deleteCookie(wauthparam.tokencookiename); // Hapus token lama
 
