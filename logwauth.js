@@ -21,12 +21,10 @@ import Swal from "https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js
 const backendAuthAPI = "https://your-backend-api-url.com/api/auth/verify";
 
 // Konfigurasi WhatsAuth
-const wauthparam = {
-  auth_ws: "d3NzOi8vYXBpLndhLm15LmlkL3dzL3doYXRzYXV0aC9wdWJsaWM=", // Ganti dengan parameter dari API Anda
-  keyword: "aHR0cHM6Ly93YS5tZS82Mjg1MTU3OTc5NzU5P3RleHQ9d2g0dDVhdXRoMA==",
-  tokencookiehourslifetime: 18,
-};
-deleteCookie("wauthToken"); // Hapus token lama
+wauthparam.auth_ws = "d3NzOi8vYXBpLndhLm15LmlkL3dzL3doYXRzYXV0aC9wdWJsaWM=";
+wauthparam.keyword = "  aHR0cHM6Ly93YS5tZS82Mjg1MTU3OTc5NzU5P3RleHQ9d2g0dDVhdXRoMA==";
+wauthparam.tokencookiehourslifetime = 18;
+deleteCookie(wauthparam.tokencookiename); // Hapus token lama
 
 // QR Controller
 qrController(wauthparam);
